@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diamond Markdown — A knowledge base of your own.</title>
+<meta name="description" content="Self-hosted markdown knowledge base. Wikilinks, backlinks, graph view, live preview. Web-first. Git-native. MIT licensed.">
+<meta property="og:title" content="Diamond Markdown">
+<meta property="og:description" content="A self-hosted markdown knowledge base. Wikilinks, backlinks, graph, live preview. Web-first. Git-native. MIT.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://diamondmarkdown.com">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<div class="aurora" aria-hidden="true">
+	<div class="glow a"></div>
+	<div class="glow b"></div>
+	<div class="glow c"></div>
+	<div class="grid"></div>
+</div>
+
+<header class="nav">
+	<a class="wm-small" href="/">
+		<svg viewBox="0 0 100 100" class="crystal" aria-hidden="true">
+			<defs>
+				<linearGradient id="sa" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7dd3fc"/><stop offset="100%" stop-color="#60a5fa"/></linearGradient>
+				<linearGradient id="sb" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c084fc"/><stop offset="100%" stop-color="#818cf8"/></linearGradient>
+				<linearGradient id="sc" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#a855f7"/></linearGradient>
+				<linearGradient id="sd" x1="1" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#f97316"/></linearGradient>
+			</defs>
+			<polygon points="50,8 24,36 50,36" fill="url(#sa)"/>
+			<polygon points="50,8 76,36 50,36" fill="url(#sc)"/>
+			<polygon points="24,36 50,36 50,92" fill="url(#sb)"/>
+			<polygon points="76,36 50,36 50,92" fill="url(#sd)"/>
+			<path d="M24 36 L76 36" stroke="rgba(255,255,255,0.35)" stroke-width="0.6"/>
+			<path d="M50 8 L50 36" stroke="rgba(255,255,255,0.45)" stroke-width="0.6"/>
+			<path d="M24 36 L50 92 L76 36" stroke="rgba(255,255,255,0.25)" stroke-width="0.6" fill="none"/>
+		</svg>
+		<span>Diamond Markdown</span>
+	</a>
+	<nav>
+		<a href="#features">Features</a>
+		<a href="#run">Run it</a>
+		<a href="https://github.com/Zollicoff/diamondmd" class="gh" target="_blank" rel="noopener">GitHub ↗</a>
+	</nav>
+</header>
+
+<main>
+
+<section class="hero">
+	<div class="wm-xl" aria-label="Diamond Markdown">
+		<svg viewBox="0 0 100 100" class="crystal big" role="img">
+			<defs>
+				<linearGradient id="ha" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7dd3fc"/><stop offset="100%" stop-color="#60a5fa"/></linearGradient>
+				<linearGradient id="hb" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c084fc"/><stop offset="100%" stop-color="#818cf8"/></linearGradient>
+				<linearGradient id="hc" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#a855f7"/></linearGradient>
+				<linearGradient id="hd" x1="1" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#f97316"/></linearGradient>
+				<radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(125,211,252,0.35)"/><stop offset="70%" stop-color="rgba(125,211,252,0)"/></radialGradient>
+			</defs>
+			<circle cx="50" cy="50" r="48" fill="url(#glow)"/>
+			<polygon class="facet f1" points="50,8 24,36 50,36" fill="url(#ha)"/>
+			<polygon class="facet f2" points="50,8 76,36 50,36" fill="url(#hc)"/>
+			<polygon class="facet f3" points="24,36 50,36 50,92" fill="url(#hb)"/>
+			<polygon class="facet f4" points="76,36 50,36 50,92" fill="url(#hd)"/>
+			<path d="M24 36 L76 36" stroke="rgba(255,255,255,0.35)" stroke-width="0.6"/>
+			<path d="M50 8 L50 36" stroke="rgba(255,255,255,0.45)" stroke-width="0.6"/>
+			<path d="M24 36 L50 92 L76 36" stroke="rgba(255,255,255,0.25)" stroke-width="0.6" fill="none"/>
+			<polygon class="glint" points="38,18 32,30 44,30" fill="rgba(255,255,255,0.7)"/>
+		</svg>
+		<h1>Diamond Markdown</h1>
+	</div>
+	<p class="tag">A knowledge base of your own.</p>
+	<p class="lede">
+		Self-hosted markdown notes with <span class="wikilink">[[wikilinks]]</span>, backlinks, graph view,
+		and Obsidian-style live preview. Every save is a git commit.
+		Works in any browser. Your files stay flat on disk.
+	</p>
+	<div class="cta">
+		<a class="btn primary" href="https://github.com/Zollicoff/diamondmd" target="_blank" rel="noopener">
+			<span class="mono">★</span> GitHub
+		</a>
+		<a class="btn" href="#run">Run it →</a>
+	</div>
+	<p class="sub mono">MIT licensed · Web-first · No Electron · No account · No tracking</p>
+</section>
+
+<section class="why">
+	<div class="why-card">
+		<div class="icon">⧉</div>
+		<h3>Web-first</h3>
+		<p>Works in any browser on any device. No Electron bundle, no platform install. Host on your laptop, a Raspberry Pi, behind Tailscale — same app everywhere.</p>
+	</div>
+	<div class="why-card">
+		<div class="icon">⎇</div>
+		<h3>Git-native</h3>
+		<p>Every save is a commit. Rename a note, every wikilink updates in one atomic commit. Sync across devices with <span class="mono">git push</span>. Your history is real, diffable, and portable.</p>
+	</div>
+	<div class="why-card">
+		<div class="icon">◆</div>
+		<h3>Flat markdown</h3>
+		<p>Your notes are plain <span class="mono">.md</span> files on disk. Uninstall Diamond tomorrow; your vault still opens in <em>every</em> markdown tool. Frontmatter is standard YAML.</p>
+	</div>
+</section>
+
+<section class="features" id="features">
+	<header class="section-head">
+		<span class="eyebrow mono">What ships today</span>
+		<h2>Everything you'd expect, plus a few things you wouldn't.</h2>
+	</header>
+	<div class="feature-grid">
+		<div class="f"><span class="f-icon">[[</span><div><strong>Wikilinks</strong><p>Type <span class="mono">[[Note]]</span>. Click through. Missing targets render broken; click to create.</p></div></div>
+		<div class="f"><span class="f-icon">↩</span><div><strong>Backlinks</strong><p>Every note that links here, panel-updated live as you save.</p></div></div>
+		<div class="f"><span class="f-icon">◉</span><div><strong>Graph view</strong><p>Force-directed visualization of your vault's link graph. Drag, pan, zoom.</p></div></div>
+		<div class="f"><span class="f-icon">✎</span><div><strong>Live preview</strong><p>Obsidian-style WYSIWYG inside the editor. Markers hide when the cursor leaves the line.</p></div></div>
+		<div class="f"><span class="f-icon">⌕</span><div><strong>Search</strong><p>Fuzzy quick-switcher (<span class="mono">⌘K</span>) and full-text across the vault (<span class="mono">⌘⇧F</span>).</p></div></div>
+		<div class="f"><span class="f-icon">#</span><div><strong>Tags</strong><p>Inline <span class="mono">#tags</span> or frontmatter tags. Cloud + per-tag note list.</p></div></div>
+		<div class="f"><span class="f-icon">⌘</span><div><strong>Command palette</strong><p><span class="mono">⌘P</span>. Every action is a command, every command is scriptable.</p></div></div>
+		<div class="f"><span class="f-icon">⏱</span><div><strong>Version history</strong><p>Per-note git log, view any historical revision in place.</p></div></div>
+		<div class="f"><span class="f-icon">📅</span><div><strong>Daily notes</strong><p><span class="mono">⌘⇧D</span> opens today's note, creating it from a template if you've got one.</p></div></div>
+		<div class="f"><span class="f-icon">⇪</span><div><strong>Static publishing</strong><p>Mark <span class="mono">public: true</span> in frontmatter, publish a deploy-ready static site.</p></div></div>
+		<div class="f"><span class="f-icon">▦</span><div><strong>Multi-pane tiling</strong><p>Alt-click to split, drag tabs across panes, edits broadcast to sibling panes.</p></div></div>
+		<div class="f"><span class="f-icon">∎</span><div><strong>Multi-vault</strong><p>Point Diamond at any number of folders. Each is its own git repo, its own index.</p></div></div>
+	</div>
+</section>
+
+<section class="run" id="run">
+	<header class="section-head">
+		<span class="eyebrow mono">Self-host</span>
+		<h2>Two minutes, one terminal.</h2>
+	</header>
+	<pre class="code"><code><span class="c-prompt">$</span> git clone https://github.com/Zollicoff/diamondmd.git
+<span class="c-prompt">$</span> cd diamondmd
+<span class="c-prompt">$</span> npm install
+<span class="c-prompt">$</span> npm run dev
+
+  ➜  Local:   http://localhost:5173</code></pre>
+	<p class="run-note">
+		The sample vault ships in-repo so the app opens with real content. Point it at your own folder
+		via the vault switcher — or run it behind Tailscale, a reverse proxy, or Cloudflare Tunnel to use
+		it from every device you own.
+	</p>
+	<p class="run-note dim">
+		Production builds use <span class="mono">@sveltejs/adapter-node</span>. A Tauri desktop wrapper
+		is on the roadmap but not required — the web app is the first-class target.
+	</p>
+</section>
+
+<section class="compare">
+	<header class="section-head">
+		<span class="eyebrow mono">Who this is for</span>
+		<h2>If you like Obsidian but want to own the stack.</h2>
+	</header>
+	<p class="compare-body">
+		Diamond borrows its mental model from Obsidian — vaults, wikilinks, backlinks, graph, daily notes,
+		live preview. What it doesn't borrow is Electron, a proprietary sync protocol, a paid publish service,
+		or a plugin runtime locked to one app. If Obsidian fits your workflow, keep using Obsidian. If you
+		want the same ideas in a browser tab, backed by git, under an MIT license — that's Diamond.
+	</p>
+</section>
+
+<footer class="foot">
+	<div class="foot-inner">
+		<div class="foot-brand">
+			<svg viewBox="0 0 100 100" class="crystal tiny" aria-hidden="true">
+				<defs>
+					<linearGradient id="fa" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7dd3fc"/><stop offset="100%" stop-color="#60a5fa"/></linearGradient>
+					<linearGradient id="fb" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c084fc"/><stop offset="100%" stop-color="#818cf8"/></linearGradient>
+					<linearGradient id="fc" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#a855f7"/></linearGradient>
+					<linearGradient id="fd" x1="1" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#f97316"/></linearGradient>
+				</defs>
+				<polygon points="50,8 24,36 50,36" fill="url(#fa)"/>
+				<polygon points="50,8 76,36 50,36" fill="url(#fc)"/>
+				<polygon points="24,36 50,36 50,92" fill="url(#fb)"/>
+				<polygon points="76,36 50,36 50,92" fill="url(#fd)"/>
+			</svg>
+			<span>Diamond Markdown</span>
+		</div>
+		<nav class="foot-nav">
+			<a href="https://github.com/Zollicoff/diamondmd" target="_blank" rel="noopener">GitHub</a>
+			<a href="https://github.com/Zollicoff/diamondmd/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>
+			<a href="https://github.com/Zollicoff/diamondmd/blob/main/ACKNOWLEDGMENTS.md" target="_blank" rel="noopener">Attribution</a>
+			<a href="https://github.com/Zollicoff/diamondmd/issues" target="_blank" rel="noopener">Issues</a>
+		</nav>
+		<p class="foot-fine mono">
+			Built by <a href="https://github.com/Zollicoff">@Zollicoff</a> · MIT · No tracking · No analytics · No sign-up
+		</p>
+	</div>
+</footer>
+
+</main>
+
+</body>
+</html>
