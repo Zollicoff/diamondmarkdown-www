@@ -1,6 +1,6 @@
 # diamondmarkdown.com
 
-Landing page for [Diamond Markdown](https://github.com/Zollicoff/diamondmd).
+Landing page for [Diamond Markdown](https://github.com/Zollicoff/diamondmarkdown).
 
 Pure static HTML + CSS. No build step. Deploys as-is to Vercel / Netlify / GitHub Pages / any static host.
 
