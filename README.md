@@ -1,20 +1,67 @@
 # diamondmarkdown.com
 
-Landing page for [Diamond Markdown](https://github.com/Zollicoff/diamondmarkdown).
+The landing page for [Diamond Markdown](https://github.com/Zollicoff/diamond-markdown),
+a native Markdown notes app for macOS and Linux.
 
-Pure static HTML + CSS. No build step. Deploys as-is to Vercel / Netlify / GitHub Pages / any static host.
+Plain static HTML and CSS. There is nothing to build.
 
-## Develop
+## What is here
+
+- `index.html`: the page
+- `styles.css`: all of its styling
+- `shots/`: pictures of the app, used on the page
+- `favicon.svg`, `favicon-16.png`, `favicon-32.png`, `apple-touch-icon.png`: the mark
+- `og-image.png`: the card shown when the address is shared
+- `tools/`: what the pictures and the card are made with. Not deployed.
+
+## Look at it
+
+Open `index.html` in a browser. Every path in it is relative, so it works
+straight from the folder.
+
+To get a picture of the page without opening a browser:
 
 ```sh
-python3 -m http.server 8080
-# open http://localhost:8080
+swift tools/snapshot.swift index.html page.png 1280 0 2
 ```
 
-Or any other static file server — there's nothing to build.
+That renders the whole page 1280 pixels wide, at two image pixels per CSS
+pixel. `tools/snapshot.swift` says what the arguments mean.
 
-## Structure
+## Keeping it true
 
-- `index.html` — the page
-- `styles.css` — all styling
-- `favicon.svg` — the crystal mark
+The page describes the app, so it changes when the app does. Three things
+come from the app's repository rather than being written here:
+
+- **What the app does and does not do.** The page's feature list and its
+  "Where it stands" section follow `README.md` and `docs/guide.md` there.
+- **The pictures in `shots/`.** They are the app's own window, drawn by the
+  app:
+
+  ```sh
+  # in the diamond-markdown repository
+  cargo run -p diamond-app --features screenshots -- --screenshots sample-vault pictures
+  ```
+
+  Copy the ones the page uses into `shots/`.
+- **The links.** They point at the `desktop-rewrite` branch, where the app
+  is being developed. When that branch is merged, change them.
+
+The card, `og-image.png`, is `tools/og-image.html` rendered at 1200 by 630:
+
+```sh
+swift tools/snapshot.swift tools/og-image.html og-image.png 1200 630 1
+```
+
+## Deploy
+
+The site is a Vercel project, `diamondmarkdown-www`, deployed by hand with
+the Vercel CLI from this folder. Pushing to GitHub does not publish
+anything.
+
+```sh
+vercel deploy          # a preview address, to check first
+vercel deploy --prod   # diamondmarkdown.com
+```
+
+`.vercelignore` keeps `tools/` and this file out of what is published.
