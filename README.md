@@ -46,7 +46,8 @@ come from the app's repository rather than being written here:
   cargo run -p diamond-app --features screenshots -- --screenshots sample-vault pictures
   ```
 
-  Copy the ones the page uses into `shots/`.
+  Then, here, `tools/make-shots.sh <that folder>` puts the ones the page
+  uses into `shots/`, cropped the way the page shows them.
 - **The links.** They point at the `desktop-rewrite` branch, where the app
   is being developed. When that branch is merged, change them.
 
