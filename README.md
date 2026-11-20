@@ -10,9 +10,12 @@ Plain static HTML and CSS. There is nothing to build.
 - `index.html`: the page
 - `styles.css`: all of its styling
 - `shots/`: pictures of the app, used on the page
-- `favicon.svg`, `favicon-16.png`, `favicon-32.png`, `apple-touch-icon.png`: the mark
+- `favicon.svg`: the mark, two brackets holding a stone. Everything else
+  that shows the mark is drawn from this file.
+- `favicon-16.png`, `favicon-32.png`, `apple-touch-icon.png`: the mark as
+  icons
 - `og-image.png`: the card shown when the address is shared
-- `tools/`: what the pictures and the card are made with. Not deployed.
+- `tools/`: what the icons and the card are made with. Not deployed.
 
 ## Look at it
 
@@ -47,11 +50,16 @@ come from the app's repository rather than being written here:
 - **The links.** They point at the `desktop-rewrite` branch, where the app
   is being developed. When that branch is merged, change them.
 
-The card, `og-image.png`, is `tools/og-image.html` rendered at 1200 by 630:
+The icons and the card are rendered from `favicon.svg` and the pages in
+`tools/`. After changing the mark, or the words on the card in
+`tools/og-image.html`, make them all again:
 
 ```sh
-swift tools/snapshot.swift tools/og-image.html og-image.png 1200 630 1
+tools/make-images.sh
 ```
+
+The mark also appears once in `index.html`, as the `mark` symbol near the
+top. Keep it the same as `favicon.svg`.
 
 ## Deploy
 
