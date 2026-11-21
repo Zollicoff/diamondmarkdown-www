@@ -20,6 +20,9 @@
 
 	--radius: 10px;
 	--max: 1100px;
+
+	/* The page is dark and only dark. */
+	color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -182,10 +185,9 @@ main {
 	letter-spacing: -0.035em;
 	line-height: 1;
 	margin: 0;
-	background: linear-gradient(180deg, #ffffff 0%, #aab5dc 100%);
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
+	/* A plain colour, not a gradient clipped to the letters: a clipped
+	   gradient is a background, and tools that darken pages darken it. */
+	color: #f5f7ff;
 }
 
 .tag {
